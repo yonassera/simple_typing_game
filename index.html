@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Word Game</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="cont">
+            <h1 id="gword" class="word gw"></h1>
+            <input id = "tbox" class="textbox word" type="text" placeholder="Start typing...">
+            <h1 id="time" style="text-align: center; font-size: 2.5rem;">00:59</h1>
+        </div>
+    </div>
+
+    <div class="stat-container">
+        <div class="stat-cont">
+            <h1 class="timeup">Time is up!</h1>
+            <div class="stat">
+                <h2 id="total-stat" class="stat-label">Total: 25</h2>
+                <h2 id="right-stat" class="stat-label">Right: 20</h2>
+                <h2 id="accuracy-stat" class="stat-label">Accuracy: 80%</h2>
+            </div>
+            <button id="replay">Replay</button>
+        </div>
+    </div>
+
+    <script type="module" src="./script.js"></script>
+</body>
+</html>
