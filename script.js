@@ -12,9 +12,10 @@ const replayButton = document.getElementById('replay');
 const DURATION = 60;
 let min = DURATION;
 let timerEnabled = false;
+timer.textContent = `00:${min.toString().padStart(2, '0')}`;
 
 const len = words.length;
-const wordCache = [];
+let wordCache = [];
 const score = { right: 0, wrong: 0 };
 
 function nextWord() {
@@ -56,7 +57,7 @@ function checkWord() {
     setTimeout(() => {
       textbox.value = '';
       nextWord();
-      },100);
+      },150);
   }
 }
 
@@ -71,9 +72,9 @@ function showStatPanel() {
 
   score.right = 0;
   score.wrong = 0;
+  wordCache = [];
 
   statContainer.classList.add('active');
-
   replayButton.addEventListener('click', activateReplay);
 }
 
